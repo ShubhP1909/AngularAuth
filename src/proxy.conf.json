@@ -1,0 +1,6 @@
+{
+    "/api": {
+        "target": "https://authbackend-i4x1.onrender.com",
+        "secure": false
+    }
+}
