@@ -6,11 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
 
-  url = "https://authbackend-i4x1.onrender.com"
+  private admin = "http://localhost:4000/api/admin";
 
   constructor(private http: HttpClient) { }
 
   LatestProduct() {
-    return this.http.get<any>(this.url + "/api/admin");
+    return this.http.get<any>(this.admin);
   }
 }

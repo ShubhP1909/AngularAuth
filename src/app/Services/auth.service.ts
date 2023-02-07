@@ -9,16 +9,17 @@ import { Subject } from 'rxjs';
 })
 
 export class AuthService {
-  url = "https://authbackend-i4x1.onrender.com"
+  private registerURL = "http://localhost:4000/api/register";
+  private loginURL = "http://localhost:4000/api/login";
 
   constructor(private http: HttpClient, private route: Router) { }
 
   registerUser(user: FormGroup<any>) {
-    return this.http.post<any>(this.url + "/api/register", user)
+    return this.http.post<any>(this.registerURL, user)
   }
 
   loginUser(user: any) {
-    return this.http.post<any>(this.url + "/api/login", user)
+    return this.http.post<any>(this.loginURL, user)
   }
 
   loggedIn() {
