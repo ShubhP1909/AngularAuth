@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <h1 class="modal-title">Login</h1>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="addloginform" class="loginform">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" formControlName="email" required />
+            <div class="text-danger"
+                *ngIf="addloginform.get('email')?.hasError('required') && addloginform.get('email')?.touched">*Email
+                is
+                required</div>
+            <div class="text-danger" *ngIf="addloginform.get('email')?.hasError('pattern')">*Please enter
+                valid email-address
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" formControlName="password" />
+            <div class="text-danger"
+                *ngIf="addloginform.get('password')?.hasError('required') && addloginform.get('password')?.touched">
+                *password is required</div>
+            <div class="text-danger"
+                *ngIf="addloginform.get('password')?.hasError('minlength') && addloginform.get('password')?.touched">
+                *password must be minimum of 6 character required</div>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="addData()"
+            [disabled]="!addloginform.valid">Submit</button>
+    </form>
+</div>

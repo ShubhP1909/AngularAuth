@@ -1,0 +1,66 @@
+.talented-influencer {
+    margin-top: 100px;
+}
+
+.talented-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.card {
+    --bs-card-border-color: white;
+    background-color: #FAFBEF;
+}
+
+.user-avatar-1 {
+    display: flex;
+    margin-top: 4px;
+}
+
+.user-name {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.user-city-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.view1-btn {
+    text-align: center;
+}
+
+.btn-view1,
+.btn-view1:active,
+.btn-view1:focus,
+.btn-view1:hover {
+    color: white;
+    background-color: #1A92CF;
+    padding: 16px 70px;
+    margin: 40px 0 20px;
+}
+
+
+@media(max-width:575px) {
+    .mt-30 {
+        margin-top: 30px;
+    }
+}
+
+@media(min-width:576px) and (max-width:767px) {
+    .mt-29 {
+        margin-top: 30px;
+    }
+}
+
+@media(min-width:768px) and (max-width:992px) {
+    .btn-view1 {
+        padding: 10px 30px;
+    }
+}
