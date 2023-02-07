@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
 })
 
 export class AuthService {
-  url = "https://authbackend-i4x1.onrender.com/"
+  url = "https://authbackend-i4x1.onrender.com"
 
   constructor(private http: HttpClient, private route: Router) { }
 

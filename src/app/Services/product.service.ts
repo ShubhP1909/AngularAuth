@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProductService {
 
-  url = "https://authbackend-i4x1.onrender.com/"
+  url = "https://authbackend-i4x1.onrender.com"
 
   constructor(private http: HttpClient) { }
 
